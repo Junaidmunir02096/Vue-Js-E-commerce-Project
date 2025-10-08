@@ -1,0 +1,314 @@
+{
+  "products": [
+    {
+      "id": "8",
+      "title": "Denim Jacket updated",
+      "price": 400,
+      "oldPrice": 260,
+      "discount": 20,
+      "rating": 4.7,
+      "image": "https://img.freepik.com/free-photo/denim-jacket-white-background_125540-2329.jpg",
+      "description": "Classic denim jacket with a rugged finish. Durable and stylish for everyday wear. Button-up front and chest pockets. Works well with t-shirts and hoodies."
+    },
+    {
+      "id": "11",
+      "title": "Sports Shoes",
+      "price": 320,
+      "oldPrice": 260,
+      "discount": 20,
+      "rating": 4.3,
+      "image": "https://img.freepik.com/free-photo/sport-shoes-isolated-white-background_125540-2325.jpg",
+      "description": "Lightweight sports shoes for active wear. Cushioned sole provides comfort. Breathable mesh keeps feet cool. Perfect for running, gym, or daily wear."
+    },
+    {
+      "id": "12",
+      "title": "Running Sneakers",
+      "price": 280,
+      "oldPrice": 260,
+      "discount": 20,
+      "rating": 4.1,
+      "image": "https://img.freepik.com/free-photo/black-sneakers-isolated-white-background_125540-2323.jpg",
+      "description": "Durable sneakers designed for runners. Shock-absorbing sole reduces strain. Sleek black design matches any outfit. Great balance of style and performance."
+    },
+    {
+      "id": "13",
+      "title": "Classic Watch",
+      "price": 750,
+      "oldPrice": 260,
+      "discount": 20,
+      "rating": 4.9,
+      "image": "https://img.freepik.com/free-photo/luxury-watch-isolated-white-background_125540-2324.jpg",
+      "description": "Elegant wristwatch with premium finish. Precision movement ensures accurate time. Stainless steel strap adds durability. A timeless accessory for any occasion."
+    },
+    {
+      "id": "14",
+      "title": "Woolen Scarf",
+      "price": 110,
+      "oldPrice": 260,
+      "discount": 27,
+      "rating": 16.8,
+      "image": "https://img.freepik.com/free-photo/winter-scarf-isolated-white-background_125540-2331.jpg",
+      "description": "Warm woolen scarf for winter comfort. Soft texture feels gentle on skin. Stylish design enhances any outfit. Ideal for layering in cold weather."
+    },
+    {
+      "id": "15",
+      "title": "Baseball Cap",
+      "price": 85,
+      "oldPrice": 260,
+      "discount": 20,
+      "rating": 3.8,
+      "image": "https://img.freepik.com/free-photo/cap-white-background_125540-2332.jpg",
+      "description": "Casual cap with adjustable strap. Lightweight and breathable fabric. Protects from sun while staying stylish. Great for sports, travel, and everyday wear."
+    },
+    {
+      "id": "f598",
+      "title": "Laptop Bag",
+      "price": 231,
+      "oldPrice": 250,
+      "discount": 27,
+      "rating": 4.9,
+      "image": "https://nashermiles.com/cdn/shop/files/1_90f0026c-bd34-4b54-a682-31c5f28b76fa.jpg?crop=center&height=1600&v=1753254782&width=1600"
+    },
+    {
+      "id": "bb8f",
+      "title": "LED ",
+      "price": 94,
+      "oldPrice": 100,
+      "discount": 20,
+      "rating": 4,
+      "image": "https://aacomputers.pk/wp-content/uploads/2024/08/0895cccbbe8d57c651b18e3e52b51509.jpg_720x720q80.jpg_-1.webp"
+    },
+    {
+      "id": "9660",
+      "title": "Processor",
+      "price": 140,
+      "oldPrice": "",
+      "discount": 30,
+      "rating": 4.5,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoLKxlglTRe4Kafl-NX2fhpw5z_KzuD_OkdA&s"
+    },
+    {
+      "id": "2be9",
+      "title": "Intel Processor",
+      "price": 193,
+      "oldPrice": 200,
+      "discount": 390,
+      "rating": 5.6,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoLKxlglTRe4Kafl-NX2fhpw5z_KzuD_OkdA&s"
+    },
+    {
+      "id": "feb6",
+      "title": "Computer Mouse ",
+      "price": 20,
+      "oldPrice": 50,
+      "discount": 30,
+      "rating": 4.9,
+      "image": "https://webobjects2.cdw.com/is/image/CDW/2881640?$product-main$"
+    },
+    {
+      "id": "95de",
+      "title": "Charging Cable",
+      "price": 41,
+      "oldPrice": 50,
+      "discount": 20,
+      "rating": 4.9,
+      "image": "https://ringke.co.in/cdn/shop/files/71r6-ySibdL._SL1500.jpg?v=1717744620"
+    },
+    {
+      "id": "f9da",
+      "title": "Handfree  wire",
+      "price": 120,
+      "oldPrice": 130,
+      "discount": 30,
+      "rating": 4.5,
+      "image": "https://login.com.pk/cdn/shop/files/L-301handsfreecorrectBlack_1024x1024.webp?v=1758111128"
+    },
+    {
+      "id": "bb43",
+      "title": "Bench Press",
+      "price": "125",
+      "oldPrice": "132",
+      "discount": 22,
+      "rating": 4.4,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStuiJJivy0r0Ov5yDpkw4lUaznCBqHdT9vEQ&s"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "email": "zohaib.zafar@gmail.com",
+      "rating": 5,
+      "text": "Absolutely amazing product! Exceeded all my expectations. The quality is top-notch and delivery was super fast. Highly recommend to everyone!",
+      "date": "2024-09-15"
+    },
+    {
+      "id": "2",
+      "email": "abdullah.kareen@gmail.com",
+      "rating": 4,
+      "text": "Great product overall. Very satisfied with the purchase. Only minor issue was the packaging could be better, but the product itself is excellent.",
+      "date": "2024-09-20"
+    },
+    {
+      "id": "3",
+      "email": "numan.ahmed@gmail.com",
+      "rating": 5,
+      "text": "Best purchase I've made this year! The attention to detail is incredible. Customer service was also very helpful when I had questions.",
+      "date": "2024-09-25"
+    },
+    {
+      "id": "1759410537648",
+      "email": "abc@gmail.com",
+      "rating": 3,
+      "text": "working average this product.",
+      "date": "2025-10-02T13:08:57.648Z"
+    },
+    {
+      "id": "1759410689697",
+      "email": "abc@gmail.com",
+      "rating": 3,
+      "text": "new procut rating",
+      "date": "2025-10-02T13:11:29.697Z"
+    },
+    {
+      "email": "abc@gmail.com",
+      "rating": 2,
+      "text": "third review from same account. updation",
+      "date": "2025-10-02T13:14:04.914Z",
+      "id": "1759410844914"
+    },
+    {
+      "email": "abc@gmail.com",
+      "rating": 4,
+      "text": "Best purchase I've made this year! The attention to detail is incredible. Customer service was also very helpful when I had questions. new review",
+      "date": "2025-10-02T13:22:27.418Z",
+      "id": "1759411347418"
+    },
+    {
+      "email": "ahmed12@gmail.com",
+      "rating": 3,
+      "text": "check it's update new update. Best purchase I've made this year! new Update in this version.",
+      "date": "2025-10-06T10:46:32.337Z",
+      "id": "470c"
+    },
+    {
+      "email": "saqlain@gmail.com",
+      "rating": 3,
+      "text": "this is average product. Need to improve it's quality. check it's updation.",
+      "date": "2025-10-06T10:48:55.696Z",
+      "id": "d954"
+    },
+    {
+      "id": "283b",
+      "email": "saqlain@gmail.com",
+      "rating": 3,
+      "text": "Working fine this product.",
+      "date": "2025-10-06T10:59:05.612Z"
+    },
+    {
+      "email": "saad@gmail.com",
+      "rating": 3,
+      "text": "Nice bag bro sorry it's a lie",
+      "date": "2025-10-06T11:13:42.073Z",
+      "id": "cbbd"
+    },
+    {
+      "id": "7382",
+      "email": "abc@gmail.com",
+      "rating": 3,
+      "text": "new rating is add here",
+      "date": "2025-10-06T13:35:39.454Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "1759407081817",
+      "name": "Ahmed",
+      "email": "ahmed123@gmail.com",
+      "password": "10290192"
+    },
+    {
+      "id": "1759407475845",
+      "name": "kazim",
+      "email": "kazim@gmail.com",
+      "password": "654321"
+    },
+    {
+      "id": "1759410514499",
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "1759414564843",
+      "name": "ahmed",
+      "email": "ahmed12@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "1759473848216",
+      "name": "Abbas",
+      "email": "abbas@gmail.com",
+      "password": "11223344"
+    },
+    {
+      "id": "1759474775721",
+      "name": "Rehman",
+      "email": "rehman@gmail.com",
+      "password": "1212"
+    },
+    {
+      "id": "6685",
+      "name": "Hamza",
+      "email": "hamza@gmail.com",
+      "password": "2121"
+    },
+    {
+      "id": "2c6b",
+      "name": "Saqlain",
+      "email": "saqlain@gmail.com",
+      "password": "1209"
+    },
+    {
+      "id": "fee5",
+      "name": "Saad",
+      "email": "saad@gmail.com",
+      "password": "11223344"
+    },
+    {
+      "id": "dbd7",
+      "name": "ramzam",
+      "email": "ramzan@gmail.com",
+      "password": "ramzan123"
+    },
+    {
+      "id": "59ce",
+      "name": "numan Ali",
+      "email": "numan@gmail.com",
+      "password": "120983"
+    },
+    {
+      "id": "ea29",
+      "name": "ahmed",
+      "email": "ahmed123@gmail.com",
+      "password": "ahmed123"
+    },
+    {
+      "id": "1b01",
+      "name": "salman",
+      "email": "salman@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "d7ea",
+      "name": "ahmad12345",
+      "email": "ahmed1235@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "5c3f",
+      "name": "Typing Master",
+      "email": "typing@gmail.com",
+      "password": "typing"
+    }
+  ]
+}
