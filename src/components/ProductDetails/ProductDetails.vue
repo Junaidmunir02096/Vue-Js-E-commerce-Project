@@ -87,8 +87,14 @@ import ReviewSection from "./ReviewSection.vue";
 
 export default {
   name: "ProductDetailCard",
+
   components:{ReviewSection},
-  props: ["id"],
+
+  // props: ["id"],
+   
+  props :{
+    id :{} 
+  },
   data() {
     return {
       sizes: ["Small", "Medium", "Large", "X-Large"],

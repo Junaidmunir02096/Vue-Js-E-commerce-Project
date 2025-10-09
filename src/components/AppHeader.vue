@@ -2,7 +2,11 @@
   <header
     class="bg-white text-black px-6 py-4 border-b flex justify-between items-center"
   >
-    <router-link to="/"><h1 class="text-2xl cursor-pointer font-bold">Ecommerce App</h1></router-link>
+    <router-link to="/"
+      ><h1 class="text-2xl cursor-pointer font-bold">
+        Ecommerce App
+      </h1></router-link
+    >
 
     <div class="flex items-center gap-4 text-md font-bold text-gray-600">
       <router-link to="/" class="text-md hover:text-blue-400">Home</router-link>
@@ -13,8 +17,11 @@
       <router-link to="/cart" class="hover:text-blue-400"
         >Add to Cart</router-link
       >
-
-      <router-link v-if="isLoggedIn" to="/admin" class="hover:text-blue-400">
+      <router-link
+        v-if="isLoggedIn && currentUser.role === 'admin'"
+        to="/admin"
+        class="hover:text-blue-400"
+      >
         Admin Dashboard
       </router-link>
       <router-link v-if="isLoggedIn" to="/orders" class="hover:text-blue-400">
@@ -28,7 +35,7 @@
           {{ getFirstWord(currentUser.email) }}
         </div>
         <button
-          @click="logout"
+          @click="logout()"
           class="bg-red-600 text-white hover:bg-red-700 px-3 py-1 rounded text-sm font-semibold"
         >
           Logout
@@ -181,7 +188,7 @@ export default {
       loginError: "",
       signupError: "",
       loginForm: { email: "", password: "" },
-      signupForm: { name: "", email: "", password: "" },
+      signupForm: { name: "", email: "", password: "", role: "user" },
     };
   },
   mounted() {
@@ -203,7 +210,8 @@ export default {
           `http://localhost:3333/users?email=${this.loginForm.email}&password=${this.loginForm.password}`
         );
         if (res.data.length > 0) {
-          this.currentUser = res.data[0];
+          const user = res.data[0];
+          this.currentUser = user;
           this.isLoggedIn = true;
           localStorage.setItem("currentUser", JSON.stringify(this.currentUser));
           localStorage.setItem("isLoggedIn", true);
@@ -211,6 +219,12 @@ export default {
           alert("Login successful!");
           this.loginForm.email = "";
           this.loginForm.password = "";
+
+          if (user.role === "admin") {
+            this.$router.push("/admin");
+          } else {
+            return;
+          }
         } else {
           this.loginError = "Invalid email or password.";
         }
@@ -259,13 +273,16 @@ export default {
       this.signupForm.email = "";
       this.signupForm.password = "";
     },
-
     logout() {
+      alert("Logged out successfully!");
+
+      if (this.$route.path !== "/") {
+        this.$router.push("/");
+      }
       this.isLoggedIn = false;
       this.currentUser = {};
       localStorage.removeItem("currentUser");
       localStorage.removeItem("isLoggedIn");
-      alert("Logged out successfully!");
     },
 
     openSignup() {

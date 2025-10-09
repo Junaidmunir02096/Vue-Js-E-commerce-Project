@@ -178,6 +178,9 @@ export default {
       paymentMethod: "",
     };
   },
+  method :{
+
+  },
   computed: {
     cartItems() {
       return this.$store.getters.cartItems;

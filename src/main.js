@@ -13,8 +13,9 @@ new Vue({
   render: (h) => h(App),
 }).$mount("#app");
 
-// Load login state from localStorage
-const savedUser = JSON.parse(localStorage.getItem("currentUser"));
-if (savedUser) {
-  Vue.prototype.$user = savedUser; // store globally
-}
+
+// const savedUser = JSON.parse(localStorage.getItem("currentUser"));
+// if (savedUser) {
+//   Vue.prototype.$user = savedUser;
+// }
+

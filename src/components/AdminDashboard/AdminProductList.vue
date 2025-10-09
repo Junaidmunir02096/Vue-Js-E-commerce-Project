@@ -54,7 +54,13 @@ import EditProduct from "./EditProduct.vue";
 
 export default {
   components: { EditProduct },
-  props: ["refreshKey"],
+
+  // new syntax to use props
+
+  props: {
+    refreshKey: {},
+  },
+
   data() {
     return {
       products: [],
@@ -65,6 +71,7 @@ export default {
   watch: {
     refreshKey: "fetchProducts",
   },
+
   mounted() {
     this.fetchProducts();
   },

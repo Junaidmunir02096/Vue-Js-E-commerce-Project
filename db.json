@@ -5,7 +5,7 @@
       "title": "Denim Jacket updated",
       "price": 400,
       "oldPrice": 260,
-      "discount": 20,
+      "discount": 23,
       "rating": 4.7,
       "image": "https://img.freepik.com/free-photo/denim-jacket-white-background_125540-2329.jpg",
       "description": "Classic denim jacket with a rugged finish. Durable and stylish for everyday wear. Button-up front and chest pockets. Works well with t-shirts and hoodies."
@@ -131,6 +131,24 @@
       "discount": 22,
       "rating": 4.4,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStuiJJivy0r0Ov5yDpkw4lUaznCBqHdT9vEQ&s"
+    },
+    {
+      "id": "ba57",
+      "title": "tree",
+      "price": 2039,
+      "oldPrice": 1923,
+      "discount": 12,
+      "rating": 291,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3wxJ0c-jC6VcDASO9aiDWD9zWAeJLKrS5gg&s"
+    },
+    {
+      "id": "c7ce",
+      "title": "AC",
+      "price": 3940,
+      "oldPrice": 3049,
+      "discount": 20,
+      "rating": 4930,
+      "image": "https://t4.ftcdn.net/jpg/05/53/97/87/360_F_553978707_UzYrcYlfXHw9IszkCqQYZCIdr4mzgnAO.jpg"
     }
   ],
   "reviews": [
@@ -217,6 +235,13 @@
       "rating": 3,
       "text": "new rating is add here",
       "date": "2025-10-06T13:35:39.454Z"
+    },
+    {
+      "email": "manzar@gmail.com",
+      "rating": 3,
+      "text": "jhjhjkh updated",
+      "date": "2025-10-08T10:46:17.413Z",
+      "id": "46bf"
     }
   ],
   "users": [
@@ -224,91 +249,141 @@
       "id": "1759407081817",
       "name": "Ahmed",
       "email": "ahmed123@gmail.com",
-      "password": "10290192"
+      "password": "10290192",
+      "role": "user"
     },
     {
       "id": "1759407475845",
       "name": "kazim",
       "email": "kazim@gmail.com",
-      "password": "654321"
+      "password": "654321",
+      "role": "user"
     },
     {
       "id": "1759410514499",
       "name": "abc",
       "email": "abc@gmail.com",
-      "password": "123"
+      "password": "123",
+      "role": "user"
     },
     {
       "id": "1759414564843",
       "name": "ahmed",
       "email": "ahmed12@gmail.com",
-      "password": "1234"
+      "password": "1234",
+      "role": "user"
     },
     {
       "id": "1759473848216",
       "name": "Abbas",
       "email": "abbas@gmail.com",
-      "password": "11223344"
+      "password": "11223344",
+      "role": "user"
     },
     {
       "id": "1759474775721",
       "name": "Rehman",
       "email": "rehman@gmail.com",
-      "password": "1212"
+      "password": "1212",
+      "role": "user"
     },
     {
       "id": "6685",
       "name": "Hamza",
       "email": "hamza@gmail.com",
-      "password": "2121"
+      "password": "2121",
+      "role": "user"
     },
     {
       "id": "2c6b",
       "name": "Saqlain",
       "email": "saqlain@gmail.com",
-      "password": "1209"
+      "password": "1209",
+      "role": "user"
     },
     {
       "id": "fee5",
       "name": "Saad",
       "email": "saad@gmail.com",
-      "password": "11223344"
+      "password": "11223344",
+      "role": "user"
     },
     {
       "id": "dbd7",
       "name": "ramzam",
       "email": "ramzan@gmail.com",
-      "password": "ramzan123"
+      "password": "ramzan123",
+      "role": "user"
     },
     {
       "id": "59ce",
       "name": "numan Ali",
       "email": "numan@gmail.com",
-      "password": "120983"
+      "password": "120983",
+      "role": "user"
     },
     {
       "id": "ea29",
       "name": "ahmed",
       "email": "ahmed123@gmail.com",
-      "password": "ahmed123"
+      "password": "ahmed123",
+      "role": "user"
     },
     {
       "id": "1b01",
       "name": "salman",
       "email": "salman@gmail.com",
-      "password": "12345"
+      "password": "12345",
+      "role": "user"
     },
     {
       "id": "d7ea",
       "name": "ahmad12345",
       "email": "ahmed1235@gmail.com",
-      "password": "12345"
+      "password": "12345",
+      "role": "user"
     },
     {
       "id": "5c3f",
       "name": "Typing Master",
       "email": "typing@gmail.com",
-      "password": "typing"
+      "password": "typing",
+      "role": "user"
+    },
+    {
+      "id": "f081",
+      "name": "Manzar",
+      "email": "manzar@gmail.com",
+      "password": "11223344",
+      "role": "user"
+    },
+    {
+      "id": "1f05",
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "11223344",
+      "role": "admin"
+    },
+    {
+      "id": "4c7a",
+      "name": "muzammil",
+      "email": "muzzamil@gmail.com",
+      "password": "12345",
+      "role": "user"
+    },
+    {
+      "id": "fdc1",
+      "name": "Absaer",
+      "email": "absar@gmail.com",
+      "password": "absar123",
+      "role": "user"
+    },
+    {
+      "id": "e89a",
+      "name": "zohaib",
+      "email": "zohaib@gmail.com",
+      "password": "12341234",
+      "role": "user"
     }
   ]
 }

@@ -67,7 +67,14 @@
 import axios from "axios";
 
 export default {
-  props: ["visible", "productData"],
+  // props: ["visible", "productData"],
+
+  // another syntex of props 
+
+  props: {
+    visible:{},
+    productData: {}
+  },
   data() {
     return {
       product: { ...this.productData }, 
