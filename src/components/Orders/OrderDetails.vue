@@ -8,9 +8,10 @@
         <p><strong>Phone:</strong> {{ order.customer.phone }}</p>
         <p>
           <strong>Address:</strong>
-          {{ order.customer.address }}, {{ order.customer.city }} - {{ order.customer.zip }}
+          {{ order.customer.address }}, {{ order.customer.city }} -
+          {{ order.customer.zip }}
         </p>
-      </div>    
+      </div>
 
       <!-- Items List -->
       <h2 class="text-xl font-bold mb-3">Items</h2>
@@ -28,9 +29,7 @@
           <h3 class="font-semibold">{{ item.title }}</h3>
           <p>${{ item.price }} × {{ item.quantity }}</p>
         </div>
-        <p class="font-bold">
-          ${{ item.price * item.quantity }}
-        </p>
+        <p class="font-bold">${{ item.price * item.quantity }}</p>
       </div>
       <p class="mt-6 text-xl font-bold">Total: ${{ order.total }}</p>
     </div>

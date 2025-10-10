@@ -1,12 +1,12 @@
 <template>
-  <div class=" w-full flex">
-    <div class="p-6  w-[60%] h-[90vh] overflow-y-auto">
+  <div class="w-full flex">
+    <div class="p-6 w-[60%] h-[90vh] overflow-y-auto">
       <h1 class="text-2xl font-bold mb-4">Your Cart : {{ cartCount }}</h1>
       <div v-if="cartItems.length">
         <div
           v-for="item in cartItems"
           :key="item.id"
-          class="flex justify-between items-center border-1 border-gray-800  p-4 rounded shadow mb-[3vw]"
+          class="flex justify-between items-center border-1 border-gray-800 p-4 rounded shadow mb-[3vw]"
         >
           <img
             :src="item.image"
@@ -19,14 +19,14 @@
             <div class="flex items-center gap-3 mt-2">
               <button
                 @click="$store.dispatch('decrementQty', item.id)"
-                class=" px-2 py-1 rounded hover:bg-gray-400"
+                class="px-2 py-1 rounded hover:bg-gray-400"
               >
                 -
               </button>
               <span class="font-semibold">{{ item.quantity }}</span>
               <button
                 @click="$store.dispatch('incrementQty', item.id)"
-                class=" px-2 py-1 rounded hover:bg-gray-400"
+                class="px-2 py-1 rounded hover:bg-gray-400"
               >
                 +
               </button>
@@ -51,15 +51,15 @@
     <div class="flex items-center justify-between mx-auto">
       <div
         class="relative border border-black rounded-md overflow-hidden h-[45vh] flex flex-col text-center bg-gray-200 w-[25vw]"
-      >
-       <h1 class="text-2xl font-bold p-3 ">Cart Totals</h1>
-        <div class="flex justify-around p-3  text-2xl font-bold">
+        >
+        <h1 class="text-2xl font-bold p-3">Cart Totals</h1>
+        <div class="flex justify-around p-3 text-2xl font-bold">
           <h2>Total Items :</h2>
-          <h2>{{ cartCount }}</h2>
+          <h2>{{ cartCount}}</h2>
         </div>
-        <div class="flex justify-around p-3  text-2xl font-bold">
+        <div class="flex justify-around p-3 text-2xl font-bold">
           <h2>Total Price :</h2>
-          <h2>$ {{ cartTotal }}</h2>
+          <h2>$ {{ cartItems }}</h2>
         </div>
         <div class="w-full absolute bottom-10">
           <router-link to="/checkout">
@@ -74,7 +74,23 @@
 </template>
 
 <script>
+
+
 export default {
+  Vuex: {
+    getters: {
+      // cartItems() {
+      //   return this.$store.getters.cartItems;
+      // },
+      // cartTotal() {
+      //   return this.$store.getters.cartTotal;
+      // },
+      // cartCount() {
+      //   return this.cartItems.length;
+      // },
+    },
+  },
+
   name: "CartPage",
   computed: {
     cartItems() {

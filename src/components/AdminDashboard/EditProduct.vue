@@ -80,6 +80,14 @@ export default {
       product: { ...this.productData }, 
     };
   },
+  vuex: {
+    getters: {
+      
+    },
+    actions: {
+
+    }
+  },
   watch: {
     productData(newVal) {
       this.product = { ...newVal };

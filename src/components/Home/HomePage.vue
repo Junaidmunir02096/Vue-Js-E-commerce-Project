@@ -68,13 +68,13 @@
 </template>
 
 <script>
-
 import axios from "axios";
 export default {
   name: "HomePage",
 
   data() {
     return {
+       
       products: [],
     };
   },
@@ -87,13 +87,13 @@ export default {
     handleAddToCart(product) {
       this.$store.dispatch("addToCart", {
         ...product,
-        quantity:1
+        quantity: 1,
       });
       alert("Add To Cart Successfully");
     },
-    ProductDetails(product){
+    ProductDetails(product) {
       this.$store.dispatch("addToCart", product);
-    }
+    },
   },
 };
 </script>
