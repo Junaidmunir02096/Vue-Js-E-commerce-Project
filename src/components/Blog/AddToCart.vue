@@ -25,7 +25,7 @@
               </button>
               <span class="font-semibold">{{ item.quantity }}</span>
               <button
-                @click="$store.dispatch(' ', item.id)"
+                @click="$store.dispatch('incrementQty', item.id)"
                 class="px-2 py-1 rounded hover:bg-gray-400"
               >
                 +
@@ -36,7 +36,7 @@
             <p class="font-bold">${{ item.price * item.quantity }}</p>
             <button
               @click="$store.dispatch('removeFromCart', item.id)"
-              class="mt-2 bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
+              class="mt-2 bg-red-500 1 text-white px-3 py-1 rounded"
             >
               Remove
             </button>
@@ -59,7 +59,7 @@
         </div>
         <div class="flex justify-around p-3 text-2xl font-bold">
           <h2>Total Price :</h2>
-          <h2>${{ cartItems }}</h2>
+          <h2>${{ cartTotal }}</h2>
         </div>
         <div class="w-full absolute bottom-10">
           <router-link to="/checkout">
@@ -75,6 +75,7 @@
 
 <script>
 export default {
+  
   // Vuex: {
   //   getters: {
   //     cartItems() {
