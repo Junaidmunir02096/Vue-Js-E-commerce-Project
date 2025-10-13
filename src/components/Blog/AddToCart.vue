@@ -12,7 +12,7 @@
             :src="item.image"
             alt="Product"
             class="w-20 h-20 object-cover rounded"
-          />
+            />
           <div class="flex-1 ml-7">
             <h3 class="font-semibold">{{ item.title }}</h3>
             <p class="text-gray-500">${{ item.price }} each</p>
@@ -25,7 +25,7 @@
               </button>
               <span class="font-semibold">{{ item.quantity }}</span>
               <button
-                @click="$store.dispatch('incrementQty', item.id)"
+                @click="$store.dispatch(' ', item.id)"
                 class="px-2 py-1 rounded hover:bg-gray-400"
               >
                 +
@@ -51,15 +51,15 @@
     <div class="flex items-center justify-between mx-auto">
       <div
         class="relative border border-black rounded-md overflow-hidden h-[45vh] flex flex-col text-center bg-gray-200 w-[25vw]"
-        >
+      >
         <h1 class="text-2xl font-bold p-3">Cart Totals</h1>
         <div class="flex justify-around p-3 text-2xl font-bold">
           <h2>Total Items :</h2>
-          <h2>{{ cartCount}}</h2>
+          <h2>{{ cartCount }}</h2>
         </div>
         <div class="flex justify-around p-3 text-2xl font-bold">
           <h2>Total Price :</h2>
-          <h2>$ {{ cartItems }}</h2>
+          <h2>${{ cartItems }}</h2>
         </div>
         <div class="w-full absolute bottom-10">
           <router-link to="/checkout">
@@ -74,22 +74,20 @@
 </template>
 
 <script>
-
-
 export default {
-  Vuex: {
-    getters: {
-      // cartItems() {
-      //   return this.$store.getters.cartItems;
-      // },
-      // cartTotal() {
-      //   return this.$store.getters.cartTotal;
-      // },
-      // cartCount() {
-      //   return this.cartItems.length;
-      // },
-    },
-  },
+  // Vuex: {
+  //   getters: {
+  //     cartItems() {
+  //       return this.$store.getters.cartItems;
+  //     },
+  //     cartTotal() {
+  //       return this.$store.getters.cartTotal;
+  //     },
+  //     cartCount() {
+  //       return this.cartItems.length;
+  //     },
+  //   },
+  // },
 
   name: "CartPage",
   computed: {

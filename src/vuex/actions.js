@@ -20,5 +20,5 @@ export default {
       };
       commit("ADD_ORDER", newOrder);
       commit("CLEAR_CART");
-    },
+    }, 
 };

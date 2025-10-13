@@ -64,12 +64,15 @@
         </div>
       </div>
     </div>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import Footer from "../Footer/Footer.vue";
 export default {
+  components:{Footer},
   name: "HomePage",
 
   data() {
