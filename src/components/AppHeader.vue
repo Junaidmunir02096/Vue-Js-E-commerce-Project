@@ -1,177 +1,215 @@
 <template>
-  <header
-    class="bg-white text-black px-6 py-4 border-b flex justify-between items-center"
-  >
-    <router-link to="/"
-      ><h1 class="text-2xl cursor-pointer font-bold">
-        Ecommerce App
-      </h1></router-link
+  <div>
+    <header
+      class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-100 shadow-sm py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300"
     >
+    <router-link to="/" class="flex items-center gap-2">
+      <span class="bg-gradient-to-r from-indigo-600 to-indigo-800 bg-clip-text text-transparent font-black text-2xl tracking-wider">AURA MART</span>
+    </router-link>
 
-    <div class="flex items-center gap-4 text-md font-bold text-gray-600">
-      <router-link to="/" class="text-md hover:text-blue-400">Home</router-link>
-      <router-link to="/about" class="hover:text-blue-400">About</router-link>
-      <router-link to="/services" class="hover:text-blue-400"
-        >Services</router-link
-      >
-      <router-link to="/cart" class="hover:text-blue-400"
-        >Add to Cart</router-link
-      >
+    <div class="flex items-center gap-6 text-sm font-semibold text-gray-600">
+      <router-link to="/" class="hover:text-indigo-600 transition-colors duration-200" exact-active-class="text-indigo-600 font-bold">Home</router-link>
+      <router-link to="/about" class="hover:text-indigo-600 transition-colors duration-200" exact-active-class="text-indigo-600 font-bold">About</router-link>
+      <router-link to="/services" class="hover:text-indigo-600 transition-colors duration-200" exact-active-class="text-indigo-600 font-bold">Services</router-link>
+      
+      <!-- Cart Link with Dynamic Badge -->
+      <router-link to="/cart" class="relative hover:text-indigo-600 transition-colors duration-200 flex items-center gap-1.5" exact-active-class="text-indigo-600 font-bold">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        <span>Cart</span>
+        <span v-if="cartCount > 0" class="absolute -top-2.5 -right-3.5 bg-indigo-600 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-white shadow-sm">
+          {{ cartCount }}
+        </span>
+      </router-link>
+
       <router-link
         v-if="isLoggedIn && currentUser.role === 'admin'"
         to="/admin"
-        class="hover:text-blue-400"
+        class="hover:text-indigo-600 transition-colors duration-200"
+        exact-active-class="text-indigo-600 font-bold"
       >
-        Admin Dashboard
+        Admin
       </router-link>
-      <router-link v-if="isLoggedIn" to="/orders" class="hover:text-blue-400">
+      
+      <router-link v-if="isLoggedIn" to="/orders" class="hover:text-indigo-600 transition-colors duration-200" exact-active-class="text-indigo-600 font-bold">
         Orders
       </router-link>
 
-      <div v-if="isLoggedIn" class="flex items-center gap-3">
-        <div
-          class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-bold"
-        >
-          {{ getFirstWord(currentUser.email) }}
+      <!-- Auth Buttons / User Avatar -->
+      <div v-if="isLoggedIn" class="flex items-center gap-4 pl-2 border-l border-gray-200">
+        <div class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-500 to-indigo-700 flex items-center justify-center text-white text-xs font-bold shadow-md shadow-indigo-100"
+          >
+            {{ getFirstWord(currentUser.email) }}
+          </div>
+          <span class="text-xs text-gray-500 hidden md:inline font-medium">{{ currentUser.name }}</span>
         </div>
         <button
           @click="logout()"
-          class="bg-red-600 text-white hover:bg-red-700 px-3 py-1 rounded text-sm font-semibold"
+          class="bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all"
         >
           Logout
         </button>
       </div>
 
-      <div v-else class="flex gap-3">
+      <div v-else class="flex gap-2 pl-2 border-l border-gray-200">
         <button
           @click="showLogin = true"
-          class="bg-blue-600 text-white hover:bg-blue-700 px-3 py-1 rounded text-sm font-semibold"
+          class="bg-indigo-50 text-indigo-700 hover:bg-indigo-100 px-4 py-1.5 rounded-lg text-xs font-bold transition-all"
         >
           Login
         </button>
         <button
           @click="showSignup = true"
-          class="bg-green-600 text-black hover:bg-green-700 px-3 py-1 rounded text-sm font-semibold"
+          class="bg-indigo-600 text-white hover:bg-indigo-700 px-4 py-1.5 rounded-lg text-xs font-bold shadow-md shadow-indigo-100 transition-all"
         >
           Sign Up
         </button>
       </div>
     </div>
+    </header>
 
     <!-- LOGIN MODAL -->
-
     <div
       v-if="showLogin"
-      class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+      class="fixed inset-0 bg-gray-900/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-all duration-300"
     >
-      <div class="bg-white rounded-lg shadow-xl w-full max-w-md p-6">
-        <div class="flex items-center justify-between py-5 border-b">
-          <h3 class="text-2xl font-bold text-gray-800">Login</h3>
-          <button
-            @click="closeLoginModal"
-            class="text-white flex items-center justify-center hover:text-gray-300 text-3xl text-center bg-gray-500 h-[30px] w-[30px] rounded-full font-bold"
-          >
-            ×
-          </button>
+      <div class="bg-white rounded-3xl border border-gray-100 shadow-2xl w-full max-w-md p-8 relative space-y-6">
+        <button
+          @click="closeLoginModal"
+          class="absolute top-5 right-5 text-gray-400 hover:text-gray-600 hover:bg-gray-50 rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg transition-colors"
+        >
+          &times;
+        </button>
+
+        <div class="space-y-2 text-center">
+          <h3 class="text-2xl font-black text-gray-900">Welcome Back</h3>
+          <p class="text-sm text-gray-500">Sign in to manage your premium orders</p>
         </div>
 
-        <input
-          v-model="loginForm.email"
-          type="email"
-          placeholder="Email"
-          class="w-full text-black focus:outline-none mb-3 p-2 border rounded"
-        />
-        <input
-          v-model="loginForm.password"
-          type="password"
-          placeholder="Password"
-          class="w-full text-black focus:outline-none mb-3 p-2 border rounded"
-        />
+        <div class="space-y-4">
+          <div class="flex flex-col space-y-1">
+            <label class="text-xs font-bold text-gray-600 uppercase tracking-wider pl-1">Email</label>
+            <input
+              v-model="loginForm.email"
+              type="email"
+              placeholder="name@example.com"
+              class="w-full text-sm text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3 border border-gray-200 rounded-xl transition-all"
+            />
+          </div>
+          <div class="flex flex-col space-y-1">
+            <label class="text-xs font-bold text-gray-600 uppercase tracking-wider pl-1">Password</label>
+            <input
+              v-model="loginForm.password"
+              type="password"
+              placeholder="••••••••"
+              class="w-full text-sm text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3 border border-gray-200 rounded-xl transition-all"
+            />
+          </div>
+        </div>
 
         <div
           v-if="loginError"
-          class="text-white bg-red-400 p-3 rounded-md text-sm mb-3"
+          class="text-red-700 bg-red-50 border border-red-100 p-3.5 rounded-xl text-xs font-medium"
         >
           {{ loginError }}
         </div>
+
         <button
           @click="handleLogin"
-          class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+          class="w-full bg-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-indigo-700 shadow-lg shadow-indigo-100 hover:shadow-xl transition-all"
         >
           Login
         </button>
 
-        <p class="mt-3 text-right text-sm">
+        <p class="text-center text-xs text-gray-500">
           Don’t have an account?
           <span
             @click="openSignup"
-            class="text-blue-700 font-semibold cursor-pointer"
+            class="text-indigo-600 font-bold cursor-pointer hover:underline"
           >
             Sign up
           </span>
         </p>
       </div>
     </div>
+
     <!-- SIGNUP MODAL -->
     <div
       v-if="showSignup"
-      class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+      class="fixed inset-0 bg-gray-900/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-all duration-300"
     >
-      <div class="bg-white rounded-lg shadow-xl w-full max-w-md mx-4 p-6">
-        <div class="flex items-center justify-between py-5 border-b">
-          <h3 class="text-2xl font-bold text-gray-800">SingUp</h3>
-          <button
-            @click="closeSignUpModal"
-            class="text-white flex items-center justify-center hover:text-gray-300 text-3xl text-center bg-gray-500 h-[30px] w-[30px] rounded-full font-bold"
-          >
-            ×
-          </button>
+      <div class="bg-white rounded-3xl border border-gray-100 shadow-2xl w-full max-w-md p-8 relative space-y-6">
+        <button
+          @click="closeSignUpModal"
+          class="absolute top-5 right-5 text-gray-400 hover:text-gray-600 hover:bg-gray-50 rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg transition-colors"
+        >
+          &times;
+        </button>
+
+        <div class="space-y-2 text-center">
+          <h3 class="text-2xl font-black text-gray-900">Create Account</h3>
+          <p class="text-sm text-gray-500">Explore and review premium e-commerce items</p>
         </div>
-        <input
-          v-model="signupForm.name"
-          type="text"
-          placeholder="Full Name"
-          class="w-full text-black mb-3 p-2 border rounded"
-        />
-        <input
-          v-model="signupForm.email"
-          type="email"
-          placeholder="Email"
-          class="w-full text-black mb-3 p-2 border rounded"
-        />
-        <input
-          v-model="signupForm.password"
-          type="password"
-          placeholder="Password"
-          class="w-full text-black mb-3 p-2 border rounded"
-        />
+
+        <div class="space-y-4">
+          <div class="flex flex-col space-y-1">
+            <label class="text-xs font-bold text-gray-600 uppercase tracking-wider pl-1">Full Name</label>
+            <input
+              v-model="signupForm.name"
+              type="text"
+              placeholder="John Doe"
+              class="w-full text-sm text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3 border border-gray-200 rounded-xl transition-all"
+            />
+          </div>
+          <div class="flex flex-col space-y-1">
+            <label class="text-xs font-bold text-gray-600 uppercase tracking-wider pl-1">Email</label>
+            <input
+              v-model="signupForm.email"
+              type="email"
+              placeholder="name@example.com"
+              class="w-full text-sm text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3 border border-gray-200 rounded-xl transition-all"
+            />
+          </div>
+          <div class="flex flex-col space-y-1">
+            <label class="text-xs font-bold text-gray-600 uppercase tracking-wider pl-1">Password</label>
+            <input
+              v-model="signupForm.password"
+              type="password"
+              placeholder="••••••••"
+              class="w-full text-sm text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3 border border-gray-200 rounded-xl transition-all"
+            />
+          </div>
+        </div>
 
         <div
           v-if="signupError"
-          class="text-white bg-red-400 p-3 rounded-md text-sm mb-3"
+          class="text-red-700 bg-red-50 border border-red-100 p-3.5 rounded-xl text-xs font-medium"
         >
           {{ signupError }}
         </div>
 
         <button
           @click="handleSignup"
-          class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+          class="w-full bg-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-indigo-700 shadow-lg shadow-indigo-100 hover:shadow-xl transition-all"
         >
-          Sign Up
+          Create Account
         </button>
 
-        <p class="mt-3 text-right text-sm">
+        <p class="text-center text-xs text-gray-500">
           Already have an account?
           <span
             @click="openLogin"
-            class="text-blue-700 font-semibold cursor-pointer"
+            class="text-indigo-600 font-bold cursor-pointer hover:underline"
           >
             Login
           </span>
         </p>
       </div>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
@@ -190,6 +228,12 @@ export default {
       loginForm: { email: "", password: "" },
       signupForm: { name: "", email: "", password: "", role: "user" },
     };
+  },
+  computed: {
+    cartCount() {
+      // Dynamic reactive cart badge
+      return this.$store.getters.cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    }
   },
   mounted() {
     const savedUser = JSON.parse(localStorage.getItem("currentUser"));
