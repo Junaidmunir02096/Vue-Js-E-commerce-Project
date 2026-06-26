@@ -38,7 +38,9 @@ export default {
   },
   methods: {
     async handleLogin() {
-      if (!this.email.trim() || !this.password.trim()) {
+      const email = this.email.trim().toLowerCase();
+      const password = this.password.trim();
+      if (!email || !password) {
         alert("Please fill in all fields");
         return;
       }
@@ -46,18 +48,23 @@ export default {
       try {
         // Fetch user from json-server
         const response = await axios.get(
-          `http://localhost:3333/users?email=${this.email}&password=${this.password}`
+          `http://localhost:3333/users?email=${encodeURIComponent(
+            email
+          )}&password=${encodeURIComponent(password)}`
         );
 
         if (response.data.length > 0) {
           const user = response.data[0];
-          
-          
+
           localStorage.setItem("currentUser", JSON.stringify(user));
-          localStorage.setItem("loggedIn", "true");
+          localStorage.setItem("isLoggedIn", "true");
 
           alert(`Welcome back, ${user.name}!`);
-          this.$router.push("/"); 
+          if (user.role === "admin") {
+            this.$router.push("/admin");
+          } else {
+            this.$router.push("/");
+          }
         } else {
           alert("Incorrect email or password!");
         }

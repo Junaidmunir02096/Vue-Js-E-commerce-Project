@@ -201,13 +201,17 @@ export default {
   methods: {
     async handleLogin() {
       this.loginError = "";
-      if (!this.loginForm.email.trim() || !this.loginForm.password.trim()) {
+      const email = this.loginForm.email.trim().toLowerCase();
+      const password = this.loginForm.password.trim();
+      if (!email || !password) {
         this.loginError = "Please fill in all fields";
         return;
       }
       try {
         const res = await axios.get(
-          `http://localhost:3333/users?email=${this.loginForm.email}&password=${this.loginForm.password}`
+          `http://localhost:3333/users?email=${encodeURIComponent(
+            email
+          )}&password=${encodeURIComponent(password)}`
         );
         if (res.data.length > 0) {
           const user = res.data[0];

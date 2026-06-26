@@ -400,6 +400,14 @@
       "email": "zohaib@gmail.com",
       "password": "12341234",
       "role": "user"
+    },
+    {
+      "name": "Junaid",
+      "email": "junaid@gmail.com",
+      "password": "1234567",
+      "role": "user",
+      "id": "3jtCJN9EBJ8"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
