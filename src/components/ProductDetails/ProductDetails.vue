@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from "@/services/mockApi";
 import ReviewSection from "./ReviewSection.vue";
 
 export default {

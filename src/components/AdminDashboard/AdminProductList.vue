@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from "@/services/mockApi";
 import EditProduct from "./EditProduct.vue";
 
 export default {

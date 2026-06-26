@@ -7,7 +7,7 @@
       "oldPrice": 260,
       "discount": 23,
       "rating": 4.7,
-      "image": "https://img.freepik.com/free-photo/denim-jacket-white-background_125540-2329.jpg",
+      "image": "/images/products/denim_jacket.jpg",
       "description": "Classic denim jacket with a rugged finish. Durable and stylish for everyday wear. Button-up front and chest pockets. Works well with t-shirts and hoodies."
     },
     {
@@ -17,7 +17,7 @@
       "oldPrice": 260,
       "discount": 20,
       "rating": 4.3,
-      "image": "https://img.freepik.com/free-photo/sport-shoes-isolated-white-background_125540-2325.jpg",
+      "image": "/images/products/sports_shoes.jpg",
       "description": "Lightweight sports shoes for active wear. Cushioned sole provides comfort. Breathable mesh keeps feet cool. Perfect for running, gym, or daily wear."
     },
     {
@@ -27,7 +27,7 @@
       "oldPrice": 260,
       "discount": 20,
       "rating": 4.1,
-      "image": "https://img.freepik.com/free-photo/black-sneakers-isolated-white-background_125540-2323.jpg",
+      "image": "/images/products/running_sneakers.jpg",
       "description": "Durable sneakers designed for runners. Shock-absorbing sole reduces strain. Sleek black design matches any outfit. Great balance of style and performance."
     },
     {
@@ -37,7 +37,7 @@
       "oldPrice": 260,
       "discount": 20,
       "rating": 4.9,
-      "image": "https://img.freepik.com/free-photo/luxury-watch-isolated-white-background_125540-2324.jpg",
+      "image": "/images/products/classic_watch.jpg",
       "description": "Elegant wristwatch with premium finish. Precision movement ensures accurate time. Stainless steel strap adds durability. A timeless accessory for any occasion."
     },
     {
@@ -47,7 +47,7 @@
       "oldPrice": 260,
       "discount": 27,
       "rating": 16.8,
-      "image": "https://img.freepik.com/free-photo/winter-scarf-isolated-white-background_125540-2331.jpg",
+      "image": "/images/products/woolen_scarf.jpg",
       "description": "Warm woolen scarf for winter comfort. Soft texture feels gentle on skin. Stylish design enhances any outfit. Ideal for layering in cold weather."
     },
     {
@@ -57,7 +57,7 @@
       "oldPrice": 260,
       "discount": 20,
       "rating": 3.8,
-      "image": "https://img.freepik.com/free-photo/cap-white-background_125540-2332.jpg",
+      "image": "/images/products/baseball_cap.jpg",
       "description": "Casual cap with adjustable strap. Lightweight and breathable fabric. Protects from sun while staying stylish. Great for sports, travel, and everyday wear."
     },
     {
@@ -67,7 +67,7 @@
       "oldPrice": 250,
       "discount": 27,
       "rating": 4.9,
-      "image": "https://nashermiles.com/cdn/shop/files/1_90f0026c-bd34-4b54-a682-31c5f28b76fa.jpg?crop=center&height=1600&v=1753254782&width=1600"
+      "image": "/images/products/laptop_bag.jpg"
     },
     {
       "id": "bb8f",
@@ -76,7 +76,7 @@
       "oldPrice": 100,
       "discount": 20,
       "rating": 4,
-      "image": "https://aacomputers.pk/wp-content/uploads/2024/08/0895cccbbe8d57c651b18e3e52b51509.jpg_720x720q80.jpg_-1.webp"
+      "image": "/images/products/led_light.jpg"
     },
     {
       "id": "9660",
@@ -85,7 +85,7 @@
       "oldPrice": "",
       "discount": 30,
       "rating": 4.5,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoLKxlglTRe4Kafl-NX2fhpw5z_KzuD_OkdA&s"
+      "image": "/images/products/processor.jpg"
     },
     {
       "id": "2be9",
@@ -94,7 +94,7 @@
       "oldPrice": 200,
       "discount": 390,
       "rating": 5.6,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoLKxlglTRe4Kafl-NX2fhpw5z_KzuD_OkdA&s"
+      "image": "/images/products/intel_processor.jpg"
     },
     {
       "id": "feb6",
@@ -103,7 +103,7 @@
       "oldPrice": 50,
       "discount": 30,
       "rating": 4.9,
-      "image": "https://webobjects2.cdw.com/is/image/CDW/2881640?$product-main$"
+      "image": "/images/products/computer_mouse.jpg"
     },
     {
       "id": "95de",
@@ -112,7 +112,7 @@
       "oldPrice": 50,
       "discount": 20,
       "rating": 4.9,
-      "image": "https://ringke.co.in/cdn/shop/files/71r6-ySibdL._SL1500.jpg?v=1717744620"
+      "image": "/images/products/charging_cable.jpg"
     },
     {
       "id": "f9da",
@@ -121,7 +121,7 @@
       "oldPrice": 130,
       "discount": 30,
       "rating": 4.5,
-      "image": "https://login.com.pk/cdn/shop/files/L-301handsfreecorrectBlack_1024x1024.webp?v=1758111128"
+      "image": "/images/products/handfree_wire.jpg"
     },
     {
       "id": "bb43",
@@ -130,7 +130,7 @@
       "oldPrice": "132",
       "discount": 10,
       "rating": 3.4,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStuiJJivy0r0Ov5yDpkw4lUaznCBqHdT9vEQ&s"
+      "image": "/images/products/bench_press.jpg"
     },
     {
       "id": "ba57",
@@ -139,7 +139,7 @@
       "oldPrice": 1923,
       "discount": 12,
       "rating": 291,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3wxJ0c-jC6VcDASO9aiDWD9zWAeJLKrS5gg&s"
+      "image": "/images/products/tree.jpg"
     },
     {
       "id": "c7ce",
@@ -148,7 +148,7 @@
       "oldPrice": 3049,
       "discount": 20,
       "rating": 4930,
-      "image": "https://t4.ftcdn.net/jpg/05/53/97/87/360_F_553978707_UzYrcYlfXHw9IszkCqQYZCIdr4mzgnAO.jpg"
+      "image": "/images/products/ac.jpg"
     },
     {
       "id": "a705",
@@ -157,7 +157,7 @@
       "oldPrice": 45,
       "discount": 20,
       "rating": 4.3,
-      "image": "https://profit.pakistantoday.com.pk/wp-content/uploads/2021/01/Cover-Page-e1611589765484.jpg"
+      "image": "/images/products/atm_cards.jpg"
     }
   ],
   "reviews": [

@@ -284,7 +284,7 @@
 
 <script>
 
-import axios from "axios";
+import axios from "@/services/mockApi";
 
 export default {
   name: "ReviewSection",

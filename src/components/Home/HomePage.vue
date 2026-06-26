@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from "@/services/mockApi";
 import Footer from "../Footer/Footer.vue";
 export default {
   components:{Footer},
