@@ -274,6 +274,13 @@ export default {
         return;
       }
 
+      // Check auth via Vuex — single source of truth
+      if (!this.$store.getters.isLoggedIn) {
+        // Open the unified login modal right here — user stays on checkout page
+        this.$store.dispatch("openLoginModal");
+        return;
+      }
+
       this.$store.dispatch("placeOrder", {
         customer: {
           name: this.name,

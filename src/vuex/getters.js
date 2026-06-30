@@ -1,12 +1,18 @@
 export default {
-  
-    cartItems: (state) => state.cart,
+  // ── Cart getters ──────────────────────────────────────────────────────────
+  cartItems: (state) => state.cart,
+  cartTotal: (state) =>
+    state.cart.reduce((total, item) => total + item.price * item.quantity, 0),
 
-    cartTotal: (state) =>
-      state.cart.reduce((total, item) => total + item.price * item.quantity, 0),
+  // ── Order getters ─────────────────────────────────────────────────────────
+  allOrders: (state) => state.orders,
+  getOrderById: (state) => (id) => state.orders.find((o) => o.id === id),
 
-    allOrders: (state) => state.orders,
+  // ── Auth getters — single reactive source of truth ────────────────────────
+  isLoggedIn: (state) => state.isLoggedIn,
+  currentUser: (state) => state.currentUser,
 
-    getOrderById: (state) => (id) => state.orders.find((o) => o.id === id),
-  
+  // ── Modal getters ─────────────────────────────────────────────────────────
+  showLoginModal: (state) => state.showLoginModal,
+  showSignupModal: (state) => state.showSignupModal,
 };
